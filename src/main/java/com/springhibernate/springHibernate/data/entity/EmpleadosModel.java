@@ -23,5 +23,11 @@ public class EmpleadosModel {
     private String dni;
     @Column(nullable = false)
     private int salario;
+    @ManyToOne
+    @JoinColumn(name = "idDepartamentos")
+    private DepartamentosModel idDepartamentos;
+    @ManyToOne
+    @JoinColumn(name = "idProyectos")
+    private ProyectosModel idProyectos;
 
 }
