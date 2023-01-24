@@ -17,4 +17,7 @@ public class ProyectosModel {
     @Column(nullable = false)
     private String nombre;
     private String presupuesto;
+    @OneToOne
+    @JoinColumn(name="idDepartamentos")
+    private DepartamentosModel idDepartamentos;
 }
