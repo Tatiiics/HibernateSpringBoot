@@ -1,6 +1,6 @@
-package com.springhibernate.springHibernate.data.dao;
+package com.springhibernate.springHibernate.Data.Dao;
 
-import com.springhibernate.springHibernate.data.entity.ProyectosModel;
+import com.springhibernate.springHibernate.Data.Entities.ProyectosModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface IProyectosDao extends JpaRepository<ProyectosModel, Integer> {

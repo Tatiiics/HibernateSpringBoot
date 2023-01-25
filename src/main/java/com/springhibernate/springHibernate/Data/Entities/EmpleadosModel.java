@@ -1,4 +1,4 @@
-package com.springhibernate.springHibernate.data.entity;
+package com.springhibernate.springHibernate.Data.Entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -25,9 +25,9 @@ public class EmpleadosModel {
     private int salario;
     @ManyToOne
     @JoinColumn(name = "idDepartamentos")
-    private DepartamentosModel idDepartamentos;
+    private DepartamentosModel departamento;
     @ManyToOne
     @JoinColumn(name = "idProyectos")
-    private ProyectosModel idProyectos;
+    private ProyectosModel proyecto;
 
 }
