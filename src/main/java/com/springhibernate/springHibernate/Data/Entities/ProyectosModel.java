@@ -1,4 +1,4 @@
-package com.springhibernate.springHibernate.data.entity;
+package com.springhibernate.springHibernate.Data.Entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -19,5 +19,5 @@ public class ProyectosModel {
     private String presupuesto;
     @OneToOne
     @JoinColumn(name="idDepartamentos")
-    private DepartamentosModel idDepartamentos;
+    private DepartamentosModel departamento;
 }

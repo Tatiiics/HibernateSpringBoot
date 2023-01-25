@@ -1,6 +1,6 @@
-package com.springhibernate.springHibernate.data.dao;
+package com.springhibernate.springHibernate.Data.Dao;
 
-import com.springhibernate.springHibernate.data.entity.EmpleadosModel;
+import com.springhibernate.springHibernate.Data.Entities.EmpleadosModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface IEmpleadosDao extends JpaRepository<EmpleadosModel, Integer> {
