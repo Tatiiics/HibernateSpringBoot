@@ -1,6 +1,6 @@
 package com.springhibernate.springHibernate.Dtos;
 
-import jakarta.persistence.Entity;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
