@@ -10,7 +10,7 @@ public class EmpleadosMapper  implements IMapper <EmpleadosModel, EmpleadosDto> 
     @Override
     public EmpleadosDto mapToDto(EmpleadosModel empleadosModel) {
         return EmpleadosDto.builder()
-                .id_empleado(empleadosModel.getId_empleado())
+                .id_empleado(empleadosModel.getEmpleado_id())
                 .nombre(empleadosModel.getNombre())
                 .apellidos(empleadosModel.getApellidos())
                 .dni(empleadosModel.getDni())
