@@ -12,8 +12,8 @@ import lombok.NoArgsConstructor;
 @Builder
 public class ProyectosDto {
 
-    private int idProyecto;
+    private Integer idProyecto;
     private String nombre;
     private String presupuesto;
-    private int idDepartamentos;
+    private Integer idDepartamentos;
 }

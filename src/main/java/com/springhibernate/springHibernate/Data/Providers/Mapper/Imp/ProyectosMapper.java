@@ -10,10 +10,10 @@ public class ProyectosMapper implements IMapper<ProyectosModel, ProyectosDto> {
     @Override
     public ProyectosDto mapToDto(ProyectosModel proyectosModel) {
         return ProyectosDto.builder()
-                .idProyecto(proyectosModel.getIdProyecto())
+                .idProyecto(proyectosModel.getProyecto_id())
                 .nombre(proyectosModel.getNombre())
                 .presupuesto(proyectosModel.getPresupuesto())
-                .idDepartamentos(proyectosModel.getDepartamento().getCodigo())
+                .idDepartamentos(proyectosModel.getDepartamento().getDepartamento_id())
                 .build();
     }
 

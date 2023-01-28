@@ -11,7 +11,7 @@ public class DepartamentosMapper implements IMapper<DepartamentosModel, Departam
     @Override
     public DepartamentosDto mapToDto(DepartamentosModel departamentosModel) {
         return DepartamentosDto.builder()
-                .codigo(departamentosModel.getCodigo())
+                .codigo(departamentosModel.getDepartamento_id())
                 .nombre(departamentosModel.getNombre())
                 .presupuesto(departamentosModel.getPresupuesto())
                 .gastos(departamentosModel.getGastos())
