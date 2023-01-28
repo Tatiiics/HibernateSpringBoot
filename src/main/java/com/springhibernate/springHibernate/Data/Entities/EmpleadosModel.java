@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class EmpleadosModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // autoincremento del id
-    private Integer id_empleado;
+    private Integer empleado_id;
     @Column(nullable = false) //Para que no sea null el valor nombre
     private String nombre;
 
@@ -23,7 +23,7 @@ public class EmpleadosModel {
     @Column(nullable = false)
     private String dni;
     @Column(nullable = false)
-    private int salario;
+    private Integer salario;
     @ManyToOne
     @JoinColumn(name = "departamento_id")
     private DepartamentosModel departamento;
