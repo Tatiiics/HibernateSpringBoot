@@ -1,6 +1,7 @@
 package com.springhibernate.springHibernate.Data.Entities;
 
-import jakarta.persistence.*;
+
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,8 +14,8 @@ import lombok.NoArgsConstructor;
 
 public class EmpleadosModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO) // autoincremento del id
-    private int id_empleado;
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // autoincremento del id
+    private Integer id_empleado;
     @Column(nullable = false) //Para que no sea null el valor nombre
     private String nombre;
 
@@ -24,10 +25,10 @@ public class EmpleadosModel {
     @Column(nullable = false)
     private int salario;
     @ManyToOne
-    @JoinColumn(name = "idDepartamentos")
+    @JoinColumn(name = "departamento_id")
     private DepartamentosModel departamento;
     @ManyToOne
-    @JoinColumn(name = "idProyectos")
+    @JoinColumn(name = "proyecto_id")
     private ProyectosModel proyecto;
 
 }

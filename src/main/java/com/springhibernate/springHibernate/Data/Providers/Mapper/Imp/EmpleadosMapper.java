@@ -15,8 +15,8 @@ public class EmpleadosMapper  implements IMapper <EmpleadosModel, EmpleadosDto> 
                 .apellidos(empleadosModel.getApellidos())
                 .dni(empleadosModel.getDni())
                 .salario(empleadosModel.getSalario())
-                .idDepartamentos(empleadosModel.getDepartamento().getCodigo())
-                .idProyectos(empleadosModel.getProyecto().getIdProyecto())
+                .idDepartamentos(empleadosModel.getDepartamento().getDepartamento_id())
+                .idProyectos(empleadosModel.getProyecto().getProyecto_id())
                 .build();
     }
 

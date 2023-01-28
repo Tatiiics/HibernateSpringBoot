@@ -1,8 +1,8 @@
 package com.springhibernate.springHibernate.Core.Controllers;
 
 import com.springhibernate.springHibernate.Core.Services.IEmpleadosService;
+import com.springhibernate.springHibernate.Data.Entities.EmpleadosModel;
 import com.springhibernate.springHibernate.Dtos.EmpleadosDto;
-import jdk.jfr.Registered;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,4 +21,5 @@ public class EmpleadosController {
     public List <EmpleadosDto> listaEmpleados () {
         return empleadosService.getListaEmpleados();
     }
+
 }

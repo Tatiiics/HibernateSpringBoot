@@ -1,6 +1,6 @@
 package com.springhibernate.springHibernate.Data.Entities;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,12 +12,12 @@ import lombok.NoArgsConstructor;
 @Table(name="Proyectos")
 public class ProyectosModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO) // autoincremento del id
-    private int idProyecto;
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // autoincremento del id
+    private Integer proyecto_id;
     @Column(nullable = false)
     private String nombre;
     private String presupuesto;
     @OneToOne
-    @JoinColumn(name="idDepartamentos")
+    @JoinColumn(name="departamento_id")
     private DepartamentosModel departamento;
 }
