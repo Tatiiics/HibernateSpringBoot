@@ -21,21 +21,25 @@ public class EmpleadosService implements IEmpleadosService {
 
     @Override
     public EmpleadosDto getEmpleadosId(Integer id) {
+
         return empleadosProvider.getEmpleadosId(id);
     }
 
     @Override
     public EmpleadosDto insertEmpleados(String nombre, String apellido, String dni, Integer salario, Integer departamento_Id, Integer proyecto_id) {
+
         return empleadosProvider.insertEmpleados( nombre, apellido, dni, salario, departamento_Id,  proyecto_id);
     }
 
     @Override
-    public EmpleadosDto updateEmpleados(EmpleadosDto empleadosDto) {
-        return null;
+    public EmpleadosDto updateEmpleados(Integer id, String nombre, String apellido, String dni, Integer salario, Integer departamento_Id, Integer proyecto_id) {
+
+        return empleadosProvider.updateEmpleados(id, nombre, apellido, dni, salario, departamento_Id, proyecto_id);
     }
 
     @Override
     public void deleteEmpleadosId(Integer id) {
+        
         empleadosProvider.deleteEmpleadosId(id);
     }
 

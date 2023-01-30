@@ -30,6 +30,7 @@ public class EmpleadosProvider implements IEmpleadosProvider {
 
     @Override
     public List<EmpleadosDto> getEmpleados() {
+
         return iEmpleadosDao.findAll().stream()
                 .map(mapperEmpleados::mapToDto)
                 .collect(Collectors.toList());
@@ -37,6 +38,7 @@ public class EmpleadosProvider implements IEmpleadosProvider {
 
     @Override
     public EmpleadosDto getEmpleadosId(Integer id) {
+
         return iEmpleadosDao.findById(id)
                 .map(mapperEmpleados::mapToDto)
                 .orElse(null);
@@ -59,17 +61,40 @@ public class EmpleadosProvider implements IEmpleadosProvider {
 
         iEmpleadosDao.save(newEmpleado);
 
-
         return mapperEmpleados.mapToDto(newEmpleado);
     }
 
     @Override
-    public EmpleadosDto updateEmpleados(EmpleadosDto empleadosDto) {
-        return null;
+    public EmpleadosDto updateEmpleados(Integer id, String nombre, String apellido, String dni, Integer salario, Integer departamento_Id, Integer proyecto_id) {
+
+        DepartamentosModel departamento = iDepartamentosDao.findById(departamento_Id).orElse(null);
+        ProyectosModel proyecto = iProyectosDao.findById(proyecto_id).orElse(null);
+        EmpleadosModel empleado = iEmpleadosDao.findById(id).orElse(null);
+
+        empleado = empleado.builder()
+                .empleado_id(id)
+                .nombre(nombre)
+                .apellidos(apellido)
+                .dni(dni)
+                .salario(salario)
+                .departamento(departamento)
+                .proyecto(proyecto)
+                .build();
+
+        System.out.println(empleado);
+
+        iEmpleadosDao.save(empleado);
+
+            return mapperEmpleados.mapToDto(empleado);
     }
 
     @Override
     public void deleteEmpleadosId(Integer id) {
+
+        if(!iEmpleadosDao.existsById(id)){
+
+            throw new RuntimeException("USUARIO NO EXISTE");
+        }
         iEmpleadosDao.deleteById(id);
     }
 

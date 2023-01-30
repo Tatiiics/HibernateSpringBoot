@@ -13,7 +13,7 @@ public class ProyectosMapper implements IMapper<ProyectosModel, ProyectosDto> {
                 .idProyecto(proyectosModel.getProyecto_id())
                 .nombre(proyectosModel.getNombre())
                 .presupuesto(proyectosModel.getPresupuesto())
-                .idDepartamentos(proyectosModel.getDepartamento().getDepartamento_id())
+                .idDepartamentos((proyectosModel.getDepartamento()==null)? null: proyectosModel.getDepartamento().getDepartamento_id())
                 .build();
     }
 

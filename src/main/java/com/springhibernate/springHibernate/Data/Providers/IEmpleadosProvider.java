@@ -11,7 +11,7 @@ public interface IEmpleadosProvider {
     List<EmpleadosDto> getEmpleados();
     EmpleadosDto getEmpleadosId(Integer id);
     EmpleadosDto insertEmpleados(String nombre, String apellido, String dni, Integer salario, Integer departamento_Id, Integer proyecto_id);
-    EmpleadosDto updateEmpleados(EmpleadosDto empleadosDto);
+    EmpleadosDto updateEmpleados(Integer id, String nombre, String apellido, String dni, Integer salario, Integer departamento_Id, Integer proyecto_id);
     void deleteEmpleadosId(Integer id);
 
 }
