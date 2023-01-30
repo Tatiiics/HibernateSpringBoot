@@ -12,8 +12,10 @@ import java.util.List;
 public class DepartamentosService implements IDepartamentosService {
 
     private final IDepartamentosProvider departamentosProvider;
+
     @Override
     public List<DepartamentosDto> getListaDepartamentos() {
+
         return departamentosProvider.getDepartamentos();
     }
 }

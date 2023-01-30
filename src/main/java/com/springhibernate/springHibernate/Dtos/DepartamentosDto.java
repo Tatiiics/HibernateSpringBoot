@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 public class DepartamentosDto {
+
     private Integer codigo;
     private String nombre;
     private Integer presupuesto;

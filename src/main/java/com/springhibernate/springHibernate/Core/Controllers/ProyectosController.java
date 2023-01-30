@@ -13,9 +13,12 @@ import java.util.List;
 @AllArgsConstructor
 @RequestMapping("/proyectos")
 public class ProyectosController {
+
     private final IProyectosService proyectosService;
+
     @GetMapping("/lista")
     public List<ProyectosDto> listaProyectos(){
+
         return proyectosService.getListaProyectos();
     }
 }

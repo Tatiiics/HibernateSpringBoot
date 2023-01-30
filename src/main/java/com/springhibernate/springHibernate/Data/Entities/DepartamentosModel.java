@@ -1,6 +1,7 @@
 package com.springhibernate.springHibernate.Data.Entities;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
@@ -9,6 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@Builder
 @Table(name="Departamentos")
 
 public class DepartamentosModel {

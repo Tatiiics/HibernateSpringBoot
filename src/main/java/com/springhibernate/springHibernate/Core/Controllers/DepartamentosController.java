@@ -13,9 +13,12 @@ import java.util.List;
 @AllArgsConstructor
 @RequestMapping("/departamentos")
 public class DepartamentosController {
+
     private final IDepartamentosService departamentosService;
+
     @GetMapping("/lista")
     public List<DepartamentosDto> listaDepartamentos(){
+
         return departamentosService.getListaDepartamentos();
     }
 }
