@@ -18,4 +18,28 @@ public class DepartamentosService implements IDepartamentosService {
 
         return departamentosProvider.getDepartamentos();
     }
+
+    @Override
+    public DepartamentosDto getDepartamentosId(Integer id) {
+
+        return departamentosProvider.getDepartamentosId(id);
+    }
+
+    @Override
+    public DepartamentosDto insertDepartamentos(String nombre, Integer presupuesto, Integer gastos) {
+
+        return departamentosProvider.insertDepartamentos(nombre, presupuesto, gastos);
+    }
+
+    @Override
+    public DepartamentosDto updateDepartamentos(Integer id, String nombre, Integer presupuesto, Integer gastos) {
+
+        return departamentosProvider.updateDepartamentos(id, nombre, presupuesto, gastos);
+    }
+
+    @Override
+    public void deleteDepartamentosId(Integer id) {
+
+        departamentosProvider.deleteDepartamentosId(id);
+    }
 }
