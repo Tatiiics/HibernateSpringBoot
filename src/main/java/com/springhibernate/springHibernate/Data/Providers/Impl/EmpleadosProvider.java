@@ -81,8 +81,6 @@ public class EmpleadosProvider implements IEmpleadosProvider {
                 .proyecto(proyecto)
                 .build();
 
-        System.out.println(empleado);
-
         iEmpleadosDao.save(empleado);
 
             return mapperEmpleados.mapToDto(empleado);

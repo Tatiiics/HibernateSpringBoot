@@ -42,7 +42,6 @@ public class EmpleadosController {
     }
     // DELETE = DELETE...
     @DeleteMapping ("/borrar/{id}")
-    @ResponseStatus(HttpStatus.FOUND)
     public void borrarEmpleado (@PathVariable Integer id) {
 
        empleadosService.deleteEmpleadosId(id);
