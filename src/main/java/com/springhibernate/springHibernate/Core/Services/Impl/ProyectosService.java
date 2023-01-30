@@ -12,7 +12,9 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class ProyectosService implements IProyectosService {
+
     private final IProyectosProvider proyectosProvider;
+
     @Override
     public List<ProyectosDto> getListaProyectos() {
 

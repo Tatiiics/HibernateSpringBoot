@@ -14,9 +14,10 @@ import java.util.stream.Collectors;
 @Service
 @AllArgsConstructor
 public class ProyectosProvider implements IProyectosProvider {
-    private final IProyectosDao iProyectosDao;
 
+    private final IProyectosDao iProyectosDao;
     private final IMapper<ProyectosModel, ProyectosDto> mapperProyectos;
+
     @Override
     public List<ProyectosDto> getProyectos() {
         return iProyectosDao.findAll().stream()

@@ -1,14 +1,23 @@
 package com.springhibernate.springHibernate.Data.Providers.Mapper.Imp;
 
+import com.springhibernate.springHibernate.Data.Dao.IDepartamentosDao;
+import com.springhibernate.springHibernate.Data.Dao.IProyectosDao;
 import com.springhibernate.springHibernate.Data.Entities.EmpleadosModel;
 import com.springhibernate.springHibernate.Data.Providers.Mapper.IMapper;
 import com.springhibernate.springHibernate.Dtos.EmpleadosDto;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
+@AllArgsConstructor
 public class EmpleadosMapper  implements IMapper <EmpleadosModel, EmpleadosDto> {
+
+    private final IDepartamentosDao iDepartamentosDao;
+    private final IProyectosDao iProyectosDao;
+
     @Override
     public EmpleadosDto mapToDto(EmpleadosModel empleadosModel) {
+
         return EmpleadosDto.builder()
                 .id_empleado(empleadosModel.getEmpleado_id())
                 .nombre(empleadosModel.getNombre())
@@ -22,6 +31,14 @@ public class EmpleadosMapper  implements IMapper <EmpleadosModel, EmpleadosDto> 
 
     @Override
     public EmpleadosModel mapToEntity(EmpleadosDto empleadosDto) {
-        return null;
+
+        return EmpleadosModel.builder()
+                .nombre(empleadosDto.getNombre())
+                .apellidos(empleadosDto.getApellidos())
+                .dni(empleadosDto.getDni())
+                .salario(empleadosDto.getSalario())
+                .departamento(iDepartamentosDao.findById(empleadosDto.getIdDepartamentos()).orElse(null))
+                .proyecto(iProyectosDao.findById(empleadosDto.getIdProyectos()).orElse(null))
+                .build();
     }
 }

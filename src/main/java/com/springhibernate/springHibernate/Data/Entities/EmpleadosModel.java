@@ -3,6 +3,7 @@ package com.springhibernate.springHibernate.Data.Entities;
 
 import javax.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@Builder
 @Table (name="Empleados")
 
 public class EmpleadosModel {
@@ -18,7 +20,6 @@ public class EmpleadosModel {
     private Integer empleado_id;
     @Column(nullable = false) //Para que no sea null el valor nombre
     private String nombre;
-
     private String apellidos;
     @Column(nullable = false)
     private String dni;

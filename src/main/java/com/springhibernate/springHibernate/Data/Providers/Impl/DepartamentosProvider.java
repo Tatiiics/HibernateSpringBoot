@@ -13,8 +13,10 @@ import java.util.stream.Collectors;
 @Service
 @AllArgsConstructor
 public class DepartamentosProvider  implements IDepartamentosProvider {
+
     private final IDepartamentosDao iDepartamentosDao;
     private final IMapper <DepartamentosModel, DepartamentosDto> mappperDepartamentos;
+
     @Override
     public List<DepartamentosDto> getDepartamentos() {
         return iDepartamentosDao.findAll().stream()
