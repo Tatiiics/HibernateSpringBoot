@@ -17,6 +17,6 @@ public class EmpleadosDto {
     private String apellidos;
     private String dni;
     private Integer salario;
-    private Integer idDepartamentos;
+    private Integer idDepartamentosSSS;
     private Integer idProyectos;
 }

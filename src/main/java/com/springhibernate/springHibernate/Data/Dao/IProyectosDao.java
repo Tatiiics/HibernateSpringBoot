@@ -1,6 +1,5 @@
 package com.springhibernate.springHibernate.Data.Dao;
 
-import com.springhibernate.springHibernate.Data.Entities.EmpleadosModel;
 import com.springhibernate.springHibernate.Data.Entities.ProyectosModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
