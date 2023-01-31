@@ -32,13 +32,6 @@ public class EmpleadosMapper  implements IMapper <EmpleadosModel, EmpleadosDto> 
     @Override
     public EmpleadosModel mapToEntity(EmpleadosDto empleadosDto) {
 
-        return EmpleadosModel.builder()
-                .nombre(empleadosDto.getNombre())
-                .apellidos(empleadosDto.getApellidos())
-                .dni(empleadosDto.getDni())
-                .salario(empleadosDto.getSalario())
-                .departamento(iDepartamentosDao.findById(empleadosDto.getIdDepartamentos()).orElse(null))
-                .proyecto(iProyectosDao.findById(empleadosDto.getIdProyectos()).orElse(null))
-                .build();
+        return null;
     }
 }
