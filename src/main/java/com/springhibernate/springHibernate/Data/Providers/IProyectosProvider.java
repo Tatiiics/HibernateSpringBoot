@@ -8,7 +8,7 @@ public interface IProyectosProvider {
 
     List<ProyectosDto> getProyectos();
     ProyectosDto getProyectosId(Integer id);
-    ProyectosDto insertProyectos(String nombre, String presupuesto, Integer departamento_id);// a revisar
-    ProyectosDto updateProyectos(Integer id, String nombre, String presupuesto, Integer idDepartamentos);// a revisar
+    ProyectosDto insertProyectos(String nombre, Integer presupuesto, Integer departamento_id);// a revisar
+    ProyectosDto updateProyectos(Integer id, String nombre, Integer presupuesto, Integer idDepartamentos);// a revisar
     void deleteProyectosId(Integer id);
 }

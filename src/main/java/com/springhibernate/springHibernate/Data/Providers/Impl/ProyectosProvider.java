@@ -36,7 +36,7 @@ public class ProyectosProvider implements IProyectosProvider {
     }
 
     @Override
-    public ProyectosDto insertProyectos(String nombre, String presupuesto, Integer departamento_id) {
+    public ProyectosDto insertProyectos(String nombre, Integer presupuesto, Integer departamento_id) {
         //Para el Departamento_id
         DepartamentosModel departamento = iDepartamentosDao.findById(departamento_id).orElse(null);
 
@@ -51,7 +51,7 @@ public class ProyectosProvider implements IProyectosProvider {
     }
 
     @Override
-    public ProyectosDto updateProyectos(Integer id, String nombre, String presupuesto, Integer departamento_id) {
+    public ProyectosDto updateProyectos(Integer id, String nombre, Integer presupuesto, Integer departamento_id) {
 
         DepartamentosModel departamento = iDepartamentosDao.findById(departamento_id).orElse(null);
         ProyectosModel proyecto= iProyectosDao.findById(id).orElse(null);
