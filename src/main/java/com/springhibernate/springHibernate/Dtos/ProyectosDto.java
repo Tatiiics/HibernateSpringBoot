@@ -14,6 +14,6 @@ public class ProyectosDto {
 
     private Integer idProyecto;
     private String nombre;
-    private String presupuesto;
+    private Integer presupuesto;
     private Integer idDepartamentos;
 }

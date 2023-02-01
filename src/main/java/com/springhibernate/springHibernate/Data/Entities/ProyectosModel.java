@@ -18,7 +18,7 @@ public class ProyectosModel {
     private Integer proyecto_id;
     @Column(nullable = false)
     private String nombre;
-    private String presupuesto;
+    private Integer presupuesto;
     @OneToOne
     @JoinColumn(name="departamento_id")
     private DepartamentosModel departamento;
